@@ -1,0 +1,101 @@
+/* Basic styles */
+
+body {
+    background-image: linear-gradient(to right, grey, black);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    padding: 20px;
+    color: black;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.box {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.box h2 {
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px; /* Add margin between buttons */
+}
+
+.Start, .Stop, .Reset {
+    width: 200px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 0 auto; /* Reset margin for responsive layout */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+.Start{
+    background-color:black;
+    color: green;
+}
+.Stop{
+    background-color: black;
+    color: red;
+}
+.Reset{
+    background-color: black;
+    color: orange;
+}
+
+.Start:hover, .Stop:hover, .Reset:hover {
+    background-color: gray;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+    .box {
+        width: calc(100% - 20px);
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .Start, .Stop, .Reset {
+        width: 100%;
+        height: auto;
+    }
+}
